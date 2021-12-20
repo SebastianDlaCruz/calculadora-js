@@ -1,20 +1,18 @@
 const doc = document;
 
-export function calcular(btnNumeros,simbolo){
+export  function calcular(btns,contBtn){
 
-    const $numeros = doc.querySelector(`${btnNumeros} `);
+    const $contenerBtn = doc.getElementById(contBtn);
+    const $botones = doc.querySelectorAll(btns);
+    
+    $botones.forEach((i)=>{
 
-    doc.addEventListener('click',(event)=>{
+        i.addEventListener('click',(event)=>{
 
-        if(event.target.matches('.boton-number')){
+            console.log(i);
 
-            console.log($numeros);
-
-        }
+        });
 
     });
-
-    
-
 
 }

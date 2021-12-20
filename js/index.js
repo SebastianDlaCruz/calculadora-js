@@ -4,6 +4,6 @@ const doc = document;
 
 doc.addEventListener('DOMContentLoaded',(event)=>{
 
-    calcular('.boton-number');
+    calcular('#botones button','botones');
 
 });
