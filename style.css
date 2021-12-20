@@ -1,0 +1,236 @@
+*,
+::before,
+::after{
+
+    box-sizing: content-box;
+}
+
+:root{
+    
+        /** Theme 1*/
+
+        /**Backgrounds*/
+
+        --very-dark-desaturated-blue-1: hsl(222, 26%, 31%);
+        --very-dark-desaturated-blue-2: hsl(223, 31%, 20%);
+        --very-dark-desaturated-blue-3: hsl(224, 36%, 15%);
+
+        /**Keys*/
+
+        --Desaturated-dark-blue: hsl(225, 21%, 49%);
+        --Desaturated-dark-blue: hsl(224, 28%, 35%);
+
+        --red: #d03f2f;
+        --dark: hsl(6, 70%, 34%);
+
+        --Light-grayish : hsl(30, 25%, 89%);
+        --Grayish: hsl(28, 16%, 65%);
+
+        /**Text*/
+
+        --Very-dark-grayish-blue: hsl(221, 14%, 31%);
+        --White: hsl(0, 0, 100%);
+
+        /** Theme 2*/
+
+        /**Backgrounds*/
+/* 
+        --Light-gray: hsl(0, 0%, 90%);
+        --Grayish-red: hsl(0, 5%, 81%);
+        --Very-light-gray : hsl(0, 0%, 93%); */
+
+        /** Keys*/
+
+       --dark-moderate-cyan: hsl(185, 42%, 37%);
+        --very-dark-cyan : hsl(185, 58%, 25%);
+
+     /*   --Orange: hsl(25, 98%, 40%);
+        --Dark-orange : hsl(25, 99%, 27%);
+
+        --Light-grayish-yellow : hsl(45, 7%, 89%);
+        --Dark-grayish-orange : hsl(35, 11%, 61%); */
+
+        /**Text*/
+
+       /*  --Very-dark-grayish-yellow: hsl(60, 10%, 19%); */
+        /* --White : hsl(0, 0, 100%); */
+
+        /**Theme */
+
+        /**Backgrounds*/
+
+      /*   --Very-dark-violet : hsl(268, 75%, 9%);
+        --Very-dark-violet : hsl(268, 71%, 12%); */
+
+        /** Keys */
+
+       /*  --Dark-violet : hsl(281, 89%, 26%);
+        --Vivid-magenta: hsl(285, 91%, 52%);
+
+        --Pure-cyan: hsl(176, 100%, 44%);
+        --Soft-cyan : hsl(177, 92%, 70%);
+
+        --Very-dark-violet: hsl(268, 47%, 21%;);
+        --Dark-magenta: hsl(290, 70%, 36%); */
+
+        /** Text*/
+
+     /*    --Light-yellow: hsl(52, 100%, 62%);
+        --Very-dark-blue: hsl(198, 20%, 13%); */
+        /* --White: hsl(0, 0, 100%); */
+
+
+}
+
+body{
+
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    background-color: var(--very-dark-desaturated-blue-1);
+    
+}
+
+ul,
+ol,
+li{
+
+    list-style-type: none;
+    margin:0;
+    padding:0;
+}
+
+.container{
+
+    width: 360px;
+    min-height: 85vh;
+}
+
+.header{
+
+    display: flex;
+    justify-content: space-between;
+    height: 82px;
+    
+}
+
+.strong{
+
+    margin-left: 12px;
+    align-self: center;
+    font-size: 2rem;
+    color:#ffffff;
+}
+
+.header-container{
+
+    display: flex;
+}
+
+
+.contianer-paragraph{
+
+    margin-top: 25px;
+    color:#fff;
+    align-self: center;
+}
+
+.container-lists{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 115px;
+    margin-top: 4px;
+}
+
+.contianer-list{
+
+    display: flex;
+    justify-content: space-between;
+    width:  65px;
+    height: 24px;
+
+}
+
+.contianer-list__items{
+
+    
+    color: #fff;
+}
+
+.contianer-list-2{
+
+    height: 30px;
+    width:  90px;
+    border-radius: 15px;
+    background-color: var(--very-dark-desaturated-blue-2) ;
+}   
+
+.contianer-list-2{
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.contianer-list-2__items__red,
+.contianer-list-2__items__dark,
+.contianer-list-2__items__cian{
+    
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+}
+
+.contianer-list-2__items__red{
+
+    background-color: var(--red);
+}
+
+.contianer-list-2__items__dark:hover{
+
+    background-color: var(--dark);
+}
+
+.contianer-list-2__items__cian:hover{
+
+    background-color: var(--very-dark-cyan);
+
+}
+
+.desktop{
+
+    width: 95%;
+    height: 85px;
+    margin: 0 auto;
+    border-radius: 12px;
+    background-color: var(--very-dark-desaturated-blue-3);
+}
+
+.botones{
+
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 12px;
+    height: 310px;
+    margin: 25px 10px;
+    padding: 2em;
+    border-radius: 10px;
+    background-color: var(--very-dark-desaturated-blue-2);
+}
+
+.rest{
+
+    grid-column: 1/3;
+}
+
+.resultado{
+
+    grid-column: 3/5;   
+}
