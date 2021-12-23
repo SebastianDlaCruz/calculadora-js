@@ -17,18 +17,18 @@
 
         /**Keys*/
 
-        --Desaturated-dark-blue: hsl(225, 21%, 49%);
-        --Desaturated-dark-blue: hsl(224, 28%, 35%);
+        --desaturated-dark-blue: hsl(225, 21%, 49%);
+        --desaturated-dark-blue: hsl(224, 28%, 35%);
 
         --red: #d03f2f;
         --dark: hsl(6, 70%, 34%);
 
-        --Light-grayish : hsl(30, 25%, 89%);
-        --Grayish: hsl(28, 16%, 65%);
+        --light-grayish : hsl(30, 25%, 89%);
+        --grayish: hsl(28, 16%, 65%);
 
         /**Text*/
 
-        --Very-dark-grayish-blue: hsl(221, 14%, 31%);
+        --very-dark-grayish-blue-text: hsl(221, 14%, 31%);
         --White: hsl(0, 0, 100%);
 
         /** Theme 2*/
@@ -91,11 +91,11 @@ body{
     padding: 0;
     margin: 0;
     font-size: 16px;
-    background-color: var(--very-dark-desaturated-blue-1);
+    background-color: var(--very-dark-desaturated-blue-1);  
+
     
 }
 
-ul,
 ol,
 li{
 
@@ -183,8 +183,8 @@ li{
 .contianer-list-2__items__dark,
 .contianer-list-2__items__cian{
     
-    width: 18px;
-    height: 18px;
+    width: 5px;
+    height: 15px;
     border-radius: 50%;
 }
 
@@ -211,7 +211,25 @@ li{
     margin: 0 auto;
     border-radius: 12px;
     background-color: var(--very-dark-desaturated-blue-3);
+    overflow-x: scroll;
+    overflow-y: hidden;
 }
+
+
+
+.valor-actual,
+.valor-anterior{
+
+    height: 50%;
+    margin-right: 35px;
+    line-height: 40px;
+    text-align: right;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+
 
 .botones{
 
@@ -233,4 +251,38 @@ li{
 .resultado{
 
     grid-column: 3/5;   
+}
+
+button{
+
+    background: none;
+    border:none;
+    width: 45px;
+}
+
+.boton-number,
+.del,
+.sumar,
+.resta,
+.punto,
+.dividir,
+.multiplicar,
+.rest,
+.resultado{
+
+    border-radius: 8px;
+    font-size: 2rem;
+    
+}
+
+.boton-number,
+.sumar,
+.resta,
+.punto,
+.dividir,
+.multiplicar{
+     
+    background-color: var(--light-grayish);
+    color: var(--very-dark-grayish-blue-text);
+    box-shadow:  0px 5px 0px var(--grayish);
 }

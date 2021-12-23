@@ -5,7 +5,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <script  defer src="./js/index.js" type="module"></script>
   <title>Calculator app</title>
 </head>
 <body>
@@ -30,13 +29,13 @@
 
             </ol>
 
-            <ul class="contianer-list-2">
+            <div class="contianer-list-2">
 
-              <li class="contianer-list-2__items__red"></li>
-              <li class="contianer-list-2__items__dark"></li>
-              <li class="contianer-list-2__items__cian"></li>
+              <button class="contianer-list-2__items__red"></button>
+              <button class="contianer-list-2__items__dark"></button>
+              <button class="contianer-list-2__items__cian"></button>
 
-            </ul>
+            </div>
 
           </div>  
           
@@ -45,34 +44,42 @@
       </header>
 
       <main>
+ 
+          <div class="desktop" id="desktop">
 
-          <section class="desktop"></section>
+            <div class="valor-anterior" id="pantalla-1"></div>
 
-        <section class="botones" id="botones">
+            <div class="valor-actual" id="pantalla-2"></div>
 
-          <button class="boton-number">7</button>
-          <button class="boton-number">8</button>
-          <button class="boton-number">9</button>
-          <button class="del">DEL</button>
-          <button class="boton-number">4</button>
-          <button class="boton-number">5</button>
-          <button class="boton-number">6</button>
-          <button class="sumar">+</button>
-          <button class="boton-number">1</button>
-          <button class="boton-number">2</button>
-          <button class="boton-number">3</button>
-          <button class="resta">-</button>
-          <button class="punto">.</button>
-          <button class="number">0</button>
-          <button class="dividir">/</button>
-          <button class="multiplicar">x</button>
-          <button class="rest">REST</button>
-          <button class="resultado">=</button>
-        </section>
+          </div>
+
+        <div class="botones" id="botones">
+
+          <button data-namber class="boton-number">7</button>
+          <button data-namber class="boton-number">8</button>
+          <button data-namber class="boton-number">9</button>
+          <button id="borrar" class="del">DEL</button>
+          <button data-namber class="boton-number">4</button>
+          <button data-namber class="boton-number">5</button>
+          <button data-namber class="boton-number">6</button>
+          <button data-simbolos value="sumar" class="sumar">+</button>
+          <button data-namber class="boton-number">1</button>
+          <button data-namber class="boton-number">2</button>
+          <button data-namber class="boton-number">3</button>
+          <button data-simbolos value="restar" class="resta">-</button>
+          <button data-namber  class="punto">.</button>
+          <button data-namber class="boton-number">0</button>
+          <button data-simbolos value="dividir" class="dividir">/</button>
+          <button data-simbolos value="multiplicar" class="multiplicar">x</button>
+          <button id="borrar-todo" class="rest">REST</button>
+          <button data-simbolos value ="igual" class="resultado">=</button>
+
+        </div>
 
       </main>
 
     </div>
       
+    <script src="./js/index.js" type="module"></script>
 </body>
 </html>
