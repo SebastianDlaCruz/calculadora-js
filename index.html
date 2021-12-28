@@ -5,35 +5,36 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon">
   <title>Calculator app</title>
 </head>
-<body>
+<body class="style-1" id="style">
   
-    <div class="container">
+    <div class="container" id="container">
 
       <header class="header">
 
-        <strong class="strong">calc</strong>
+        <strong class="strong" data-texts>calc</strong>
 
         <div class="header-container">
 
-          <p class="contianer-paragraph">THEME</p>
+          <p class="contianer-paragraph" data-texts>THEME</p>
 
           <div class="container-lists">
 
             <ol class="contianer-list">
 
-              <li class="contianer-list__items">1</li>
-              <li class="contianer-list__items">2</li>
-              <li class="contianer-list__items">3</li>  
+              <li class="contianer-list__items" data-texts>1</li>
+              <li class="contianer-list__items" data-texts>2</li>
+              <li class="contianer-list__items" data-texts>3</li>  
 
             </ol>
 
-            <div class="contianer-list-2">
+            <div class="contianer-list-2" data-containers>
 
-              <button class="contianer-list-2__items__red"></button>
-              <button class="contianer-list-2__items__dark"></button>
-              <button class="contianer-list-2__items__cian"></button>
+              <button data-botones id="color-1" data-botons class="contianer-list-2__items__red"></button>
+              <button data-botones id="color-2" data-botons class="contianer-list-2__items__dark"></button>
+              <button data-botones id="color-3" data-botons class="contianer-list-2__items__cian"></button>
 
             </div>
 
@@ -47,18 +48,18 @@
  
           <div class="desktop" id="desktop">
 
-            <div class="valor-anterior" id="pantalla-1"></div>
+            <div class="pantalla-1" id="pantalla-1"></div>
 
-            <div class="valor-actual" id="pantalla-2"></div>
+            <div class="pantalla-2" id="pantalla-2"></div>
 
           </div>
 
-        <div class="botones" id="botones">
+        <div class="botones" id="botones"  data-containers>
 
           <button data-namber class="boton-number">7</button>
           <button data-namber class="boton-number">8</button>
           <button data-namber class="boton-number">9</button>
-          <button id="borrar" class="del">DEL</button>
+          <button id="borrar" data-colors="btn" class="del">DEL</button>
           <button data-namber class="boton-number">4</button>
           <button data-namber class="boton-number">5</button>
           <button data-namber class="boton-number">6</button>
@@ -71,8 +72,8 @@
           <button data-namber class="boton-number">0</button>
           <button data-simbolos value="dividir" class="dividir">/</button>
           <button data-simbolos value="multiplicar" class="multiplicar">x</button>
-          <button id="borrar-todo" class="rest">REST</button>
-          <button data-simbolos value ="igual" class="resultado">=</button>
+          <button id="borrar-todo" data-colors="btn"  class="rest">REST</button>
+          <button data-simbolos value ="igual" id="igual" class="resultado">=</button>
 
         </div>
 
