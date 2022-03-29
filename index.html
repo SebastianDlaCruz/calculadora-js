@@ -7,80 +7,84 @@
   <link rel="stylesheet" href="style.css">
   <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon">
   <title>Calculator app</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;400;500&display=swap" rel="stylesheet">
+
 </head>
-<body class="style-1" id="style">
-  
-    <div class="container" id="container">
+<body class=" " id="body">
 
-      <header class="header">
+    <div class="calculadora">
 
-        <strong class="strong" data-texts>calc</strong>
+      <header class="calculadora-header" id="header">
 
-        <div class="header-container">
+        <strong class="calculadora-header__strong">calc</strong>
 
-          <p class="contianer-paragraph" data-texts>THEME</p>
+        <div class="calculadora-header-contenedor">
 
-          <div class="container-lists">
+          <p class="calculadora-header-contenedor__p">THEME</p>
 
-            <ol class="contianer-list">
+          <div class="header-contenedor-botones">
 
-              <li class="contianer-list__items" data-texts>1</li>
-              <li class="contianer-list__items" data-texts>2</li>
-              <li class="contianer-list__items" data-texts>3</li>  
+             <ol class="contenedor-botones-flex__numeros">
 
-            </ol>
+               <li class="li">1</li>
+               <li class="li">2</li>
+               <li class="li">3</li>
 
-            <div class="contianer-list-2" data-containers>
+             </ol>
+             <ul class="contenedor-botones-flex__botones" id="contenedor-botones">
+               <li class="li"><button data-botones="" id="rojo" class="li-botones rojo rojo-active"></button></li>
+               <li class="li"><button data-botones="" id="naranja" class="li-botones naranja"></button></li>
+               <li class="li"><button data-botones="" id="cyan" class="li-botones cyan"></button></li>
+             </ul>            
 
-              <button data-botones id="color-1" data-botons class="contianer-list-2__items__red"></button>
-              <button data-botones id="color-2" data-botons class="contianer-list-2__items__dark"></button>
-              <button data-botones id="color-3" data-botons class="contianer-list-2__items__cian"></button>
+          </div>
 
-            </div>
-
-          </div>  
-          
         </div>
 
       </header>
 
       <main>
- 
-          <div class="desktop" id="desktop">
 
-            <div class="pantalla-1" id="pantalla-1"></div>
+        <section class="section-pantalla" id="section-pantalla">
 
-            <div class="pantalla-2" id="pantalla-2"></div>
+          <article class="section-pantalla__uno" id="pantalla-uno"></article>
 
-          </div>
+          <article class="section-pantalla__dos" id="pantalla-dos"></article>
 
-        <div class="botones" id="botones"  data-containers>
+        </section>
 
-          <button data-namber class="boton-number">7</button>
-          <button data-namber class="boton-number">8</button>
-          <button data-namber class="boton-number">9</button>
-          <button id="borrar" data-colors="btn" class="del">DEL</button>
-          <button data-namber class="boton-number">4</button>
-          <button data-namber class="boton-number">5</button>
-          <button data-namber class="boton-number">6</button>
-          <button data-simbolos value="sumar" class="sumar">+</button>
-          <button data-namber class="boton-number">1</button>
-          <button data-namber class="boton-number">2</button>
-          <button data-namber class="boton-number">3</button>
-          <button data-simbolos value="restar" class="resta">-</button>
-          <button data-namber  class="punto">.</button>
-          <button data-namber class="boton-number">0</button>
-          <button data-simbolos value="dividir" class="dividir">/</button>
-          <button data-simbolos value="multiplicar" class="multiplicar">x</button>
-          <button id="borrar-todo" data-colors="btn"  class="rest">REST</button>
-          <button data-simbolos value ="igual" id="igual" class="resultado">=</button>
+        <section class="section-botones" id="section-botones">
 
-        </div>
+          <article class="article-botones">
 
+            <button class="numero" data-botonesColor="" data-numero="">7</button>
+            <button class="numero" data-botonesColor="" data-numero="">8</button>
+            <button class="numero" data-botonesColor="" data-numero="">9</button>
+            <button class="del" id="del">DEL</button>
+            <button class="numero" data-botonesColor="" data-numero="">4</button>
+            <button class="numero" data-botonesColor="" data-numero="">5</button>
+            <button class="numero" data-botonesColor="" data-numero="">6</button>
+            <button class="aritmetica" data-botonesColor="" data-arimetica="">+</button>
+            <button class="numero" data-botonesColor="" data-numero="">1</button>
+            <button class="numero" data-botonesColor="" data-numero="">2</button>
+            <button class="numero" data-botonesColor="" data-numero="">3</button>
+            <button class="aritmetica" data-botonesColor="" data-arimetica="">-</button>
+            <button class="aritmetica" data-botonesColor="" data-numero="">.</button>
+            <button class="numero" data-botonesColor="" data-numero="">0</button>
+            <button class="aritmetica" data-botonesColor="" data-arimetica="">/</button>
+            <button class="aritmetica" data-botonesColor="" data-arimetica="">x</button>
+            <button class="rest"  id="rest">RESET</button>
+            <button class="igual" id="igual" data-arimetica="">=</button>
+
+          </article>
+
+        </section>
       </main>
 
     </div>
       
-    <script src="./js/index.js" type="module"></script>
+    <script type="module" src="./js/index.js"></script>
 </body>
 </html>
