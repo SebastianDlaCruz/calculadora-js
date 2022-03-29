@@ -116,7 +116,7 @@ button{
 .calculadora{
     
     height: 100%;
-    min-width: 65vw;
+    width: 65vw;
     
 }
 
@@ -141,7 +141,7 @@ button{
 .calculadora-header__strong{
     
     align-self: center;
-    margin-left: 1em;
+    margin:0 0.4em;
     font-size: calc(1vw + 1.6em);
 }
 
@@ -153,7 +153,7 @@ button{
     justify-content:space-between;
     align-items: center; 
     height: 5em;
-    margin-right: 2em;
+
 }
 
 
@@ -283,10 +283,43 @@ main{
     align-items: center;
     justify-content: flex-end;
     min-height: 75px;
-    padding-right: 1.5em;
+    max-width: 100%;
+    padding-right: 1em;
     text-align: right;
     
+}
+.section-pantalla__uno p,
+.section-pantalla__dos p {
 
+    margin: 0;
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+
+
+.section-pantalla__uno p::-webkit-scrollbar,
+.section-pantalla__dos p::-webkit-scrollbar{
+    -webkit-appearance: none;
+}
+
+.contenedor::-webkit-scrollbar:vertical {
+    min-width: 2%;
+}
+
+
+ .section-pantalla__uno p::-webkit-scrollbar-thumb,
+ .section-pantalla__dos p::-webkit-scrollbar-thumb{
+    background-color: #090635;
+    border-radius: 20px;
+    outline: 2px solid #508ecc;
+
+}
+
+.section-pantalla__uno p::-webkit-scrollbar-track ,
+.section-pantalla__uno p::-webkit-scrollbar-track{
+    border-radius: 1px;  
+    
 }
 
 .section-botones{
@@ -311,7 +344,7 @@ main{
     display: grid;
     grid-template-columns: repeat(4,1fr);
     justify-items: center;
-    gap: 1em;
+    gap: 1.2em;
     width:  100%;
     min-height: 17em;
     padding: 1em;
@@ -418,4 +451,12 @@ main{
     background-color:var(--Pure-cyan-key-background-toggle);
     box-shadow: 0px 5px 1px var(--Soft-cyan-key-shadow);
     color: #000;
+}
+
+@media screen and (max-width: 900px ) {
+    
+    .calculadora{
+
+        min-width: 100vw;
+    }
 }
