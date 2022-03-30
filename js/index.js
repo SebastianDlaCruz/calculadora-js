@@ -204,21 +204,36 @@ const activarBotones = (
 }
 
 
-const funcionalidadCalculadora = (dataNumero,dataAritmetica,pantallaUno,pantallaDos) =>{
+const funcionalidadCalculadora = (dataNumero,dataAritmetica,pantallaUno,pantallaDos,del,rest,mensaje) =>{
 
     const $dataNumero = doc.querySelectorAll(dataNumero),
     $dataAritmetica = doc.querySelectorAll(dataAritmetica),
     $pantallaUno = doc.getElementById(pantallaUno),
-    $pantallaDos = doc.getElementById(pantallaDos);
+    $pantallaDos = doc.getElementById(pantallaDos),
+    $del = doc.getElementById(del),
+    $rest = doc.getElementById(rest),
+    $mensaje = doc.getElementById(mensaje);
 
-    const $Calculadora = new Calculadora ($pantallaUno,$pantallaDos);
+    const $Calculadora = new Calculadora ($pantallaUno,$pantallaDos,$mensaje);
 
     $dataNumero.forEach((i)=> {
 
         i.addEventListener('click',()=> $Calculadora.digitarNumeros(i.innerHTML));
     });
     
-    $Calculadora.imprimirNumeros()
+    $Calculadora.imprimirNumeros($del);
+
+    $del.addEventListener('click',()=> $Calculadora.borrarNumero());
+
+    $rest.addEventListener('click',()=> $Calculadora.borrarTodo());
+
+    $dataAritmetica.forEach((i)=>{
+
+         i.addEventListener('click',() => $Calculadora.calcular(i))
+
+    });
+
+    $Calculadora.limitarNumeros();
 }
 
 
@@ -238,5 +253,5 @@ doc.addEventListener('DOMContentLoaded',()=>{
         'contenedor-botones'
         );
 
-    funcionalidadCalculadora('[data-numero]','[data-arimetica]','pantalla-uno','pantalla-dos');
+    funcionalidadCalculadora('[data-numero]','[data-arimetica]','pantalla-uno','pantalla-dos','del','rest','mensaje');
 });

@@ -78,6 +78,7 @@ html{
 
 body{
 
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -453,6 +454,30 @@ main{
     color: #000;
 }
 
+.mensaje{
+
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top:0;
+    left:0;
+    right: 0;
+    height: 50px;
+    background-color: rgba(168, 9, 9, 0.986);
+    color: var(--White);
+    transform: translateY(-100%);
+    transition: transform .3s ease-in-out;
+}
+
+.mensaje p{
+
+    font-size: calc(1vw + 0.6em);
+}
+.mensaje.mensaje-active{
+
+    transform: translateY(0%);
+}
 @media screen and (max-width: 900px ) {
     
     .calculadora{
